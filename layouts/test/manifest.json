@@ -15,10 +15,6 @@
       "secondary": "#2196F3",
       "accent": "#FFC107"
     },
-    "node_versions": {
-      "current": "14.17.0",
-      "LTS": "14.17.0"
-    },
     "requirements": [
       "VSC",
       "Node 14"
