@@ -1,0 +1,20 @@
+name: Merge Check
+
+on:
+  pull_request:
+    types: [opened, synchronize, labeled, unlabeled]
+
+jobs:
+  merge-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Check for required tag
+        run: |
+          if ! git log -1 --pretty=%B | grep -q "your-required-tag"; then
+            echo "::error::Missing required tag"
+            exit 1
+          fi
