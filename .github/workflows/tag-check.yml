@@ -2,19 +2,19 @@ name: Merge Check
 
 on:
   pull_request:
-    types: [opened, synchronize, labeled, unlabeled]
+    types: [labeled, unlabeled]
 
 jobs:
   merge-check:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
-      - name: Check for required tag
+      - name: Check for "ready-to-review" label
+        if: contains(github.event.pull_request.labels.*.name, 'ready-to-review')
         run: |
-          if ! git log -1 --pretty=%B | grep -q "ready-to-review"; then
-            echo "::error::Pull request must be labeled with 'ready-to-review' to be merged"
-            exit 1
-          fi
+          echo "Ready to review label is present"
+          exit 0
+      - name: Fail if "ready-to-review" label is missing
+        run: |
+          echo "Error: Ready to review label is missing"
+          exit 1
