@@ -19,6 +19,7 @@ jobs:
           echo "Ready to review label is present"
           exit 0
       - name: Fail if "ready-to-review" label is missing
+        if: contains(github.event.pull_request.labels.*.name, 'ready-to-review') != true
         run: |
           echo "Error: Ready to review label is missing"
           exit 1
