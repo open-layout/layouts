@@ -42,10 +42,6 @@
     "socials": {
       "github": "https://github.com/azaldevx",
       "discord": "",
-      "x": "g_azaldegi",
-      "_id": {
-        "$oid": "65c4c433b39ab0d7a56349b3"
-      }
-    },
-    "__v": 0
-  }
+      "x": "g_azaldegi"
+    }
+}
