@@ -1,3 +1,51 @@
 {
-    "name": "test.5"
-}
+    "name": "astro-of-imagination",
+    "version": "1.0.0",
+    "description": "Template de Portfolio Web",
+    "author": "AzalDevX",
+    "category": "website",
+    "collaborators": [
+      "IMXNOOBX"
+    ],
+    "language": "en",
+    "repository": "https://github.com/AzalDevX/orbit-of-imagination",
+    "live_preview": "https://azaldev.com",
+    "color_palette": {
+      "primary": "#4CAF50",
+      "secondary": "#2196F3",
+      "accent": "#FFC107"
+    },
+    "node_versions": {
+      "current": "14.17.0",
+      "LTS": "14.17.0"
+    },
+    "requirements": [
+      "VSC",
+      "Node 14"
+    ],
+    "frameworks": [
+      "VUE.JS"
+    ],
+    "languages": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "readme": "README.md",
+    "images": [
+      "imagen1.png",
+      "imagen2.png"
+    ],
+    "tutorial": "",
+    "documentation": "https://docs.azaldev.com",
+    "website": "https://azaldev.com",
+    "socials": {
+      "github": "https://github.com/azaldevx",
+      "discord": "",
+      "x": "g_azaldegi",
+      "_id": {
+        "$oid": "65c4c433b39ab0d7a56349b3"
+      }
+    },
+    "__v": 0
+  }
